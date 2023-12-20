@@ -1,0 +1,4 @@
+C:/Users/shaun/OneDrive/Desktop/singing-card/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir
+C:/Users/shaun/OneDrive/Desktop/singing-card/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir
+C:/Users/shaun/OneDrive/Desktop/singing-card/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/edit_cache.dir
+C:/Users/shaun/OneDrive/Desktop/singing-card/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/rebuild_cache.dir

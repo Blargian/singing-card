@@ -1,2 +1,2 @@
-# singing-card
-An ATTiny85 singing christmas card 
+# Singing Christmas Card
+An Arduino Pro MIni singing christmas card.  

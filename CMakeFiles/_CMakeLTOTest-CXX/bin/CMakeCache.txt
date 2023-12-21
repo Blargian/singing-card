@@ -67,7 +67,7 @@ CMAKE_INSTALL_PREFIX:PATH=C:/Program Files/lto-test
 CMAKE_INTERPROCEDURAL_OPTIMIZATION:UNINITIALIZED=ON
 
 //make program
-CMAKE_MAKE_PROGRAM:FILEPATH=C:/ninja.exe
+CMAKE_MAKE_PROGRAM:FILEPATH=C:/Users/shaun/AppData/Local/Ninja/ninja.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.

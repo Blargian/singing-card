@@ -1,6 +1,6 @@
 # Singing Christmas Card 🎅
 
-A singing Christmas card made using an Arduino Pro Mini, piezoelectric buzzer, LEDS, a reedswitch and magnets, and some Christmas spirit!
+A singing Christmas card made using an Arduino Pro Mini, piezoelectric buzzer, LEDS, an optical reflective sensor, and some Christmas spirit!
 
 ## Santa's playlist:
 - We wish you a merry Christmas

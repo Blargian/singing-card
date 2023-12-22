@@ -33,6 +33,7 @@ void setup() {
 }
 
 void loop() {
+    playSong(merry_christmas, sizeof(merry_christmas)/sizeof(merry_christmas[0]), merry_christmas_bpm);
     playSong(jingle_bells, sizeof(jingle_bells)/sizeof(jingle_bells[0]), jingle_bells_bpm);
 }
 

@@ -7,7 +7,7 @@ A singing Christmas card made using an Arduino Pro Mini, piezoelectric buzzer, L
 - Jingle Bells
 - Rudolph the rednose reindeer
 
-<img width="693" alt="image" src="https://github.com/Blargian/singing-card/assets/41984034/4714ac1d-bdec-4e75-bc38-02bf0bd84853">
+<img width="1088" alt="image" src="https://github.com/Blargian/singing-card/assets/41984034/9e56be38-fdf2-45ff-a76a-9e587f2c1e54">
 
 ### Disclaimer
 

@@ -12,6 +12,7 @@ int count;
 enum class Song {
   merry_christmas,
   jingle_bells, 
+  rudolph,
   count
 };
 

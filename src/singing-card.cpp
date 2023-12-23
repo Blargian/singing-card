@@ -3,6 +3,7 @@
 #include "notes.hpp"
 #include "songs/merry_christmas.hpp"
 #include "songs/jingle_bells.hpp"
+#include "songs/rudolph.hpp"
 
 // interrupt triggered on change from low/high or high/low  
 void cardOpenedClosed() {
@@ -92,6 +93,9 @@ void loop() {
           break;
         case Song::jingle_bells:
           playSong(jingle_bells, sizeof(jingle_bells)/sizeof(jingle_bells[0]), jingle_bells_bpm);
+          break;
+        case Song::rudolph:
+          playSong(rudolph_the_rednose, sizeof(rudolph_the_rednose)/sizeof(rudolph_the_rednose[0]), rudolph_bpm);
           break;
         default:
           break;

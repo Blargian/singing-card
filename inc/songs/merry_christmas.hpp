@@ -68,6 +68,6 @@ const Note merry_christmas[] = {
   Note(a5,quarter), Note(a5,eigth), Note(aS5,eigth), Note(a5,eigth), Note(g5,eigth), //53
   Note(f5,quarter), Note(d5,quarter), Note(c5,eigth), Note(c5,eigth),
   Note(d5,quarter), Note(g5,quarter), Note(e5,quarter),
-  Note(f5,half), Note(rest,quarter)
+  Note(f5,half), Note(rest,quarter),
   
 };

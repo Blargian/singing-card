@@ -7,6 +7,7 @@ const int buzzer_pin = 11;
 
 bool firstTimeOpen = false;
 volatile bool cardIsClosed = true;
+int count;
 
 enum class Song {
   merry_christmas,

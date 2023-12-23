@@ -9,28 +9,20 @@ void cardOpenedClosed() {
   static unsigned long last_interrupt_time = 0;
   unsigned long interrupt_time = millis();
   
-  if (interrupt_time - last_interrupt_time > 500) 
+  if (interrupt_time - last_interrupt_time > 100) 
   {
-    
-    if(digitalRead(2) == HIGH) { // rising edge
-      Serial.print("rising");
+    if(count==0) {
+      count++;
     } else {
-      Serial.print("falling");
-    } // falling edge
-
-    // digitalWrite(LED_BUILTIN, HIGH);
-    // if(!firstTimeOpen) { 
-    //   cardIsClosed = !cardIsClosed;
-    //   Serial.print((int)selectedSong);
-    //   ++selectedSong;
-    //   Serial.print((int)selectedSong);
-    // }
-    // digitalWrite(LED_BUILTIN, LOW);
+      count = 0;
+      ++selectedSong;
+    }
+    if(!firstTimeOpen)
+      cardIsClosed = !cardIsClosed;
   }
   last_interrupt_time = interrupt_time;
-  // cardIsClosed = !cardIsClosed; 
-  // firstTimeOpen = false;
-}
+  firstTimeOpen = false;
+};
 
 // utility function for computing number of elements in an array
 int computeSize(const Note* song) {
@@ -54,11 +46,20 @@ void playSong(const Note song[], const int notes, const int tempo_bpm) {
     }
 
     if(song[i].staccato()) {
+      digitalWrite(6,HIGH);
+      digitalWrite(7,HIGH);
       delay(static_cast<unsigned long>(wholenote/song[i].duration())/2);
       noTone(buzzer_pin);
+      digitalWrite(6,LOW);
+      digitalWrite(7,LOW);
       delay(static_cast<unsigned long>(wholenote/song[i].duration())/2);
     } else {
+      digitalWrite(6,HIGH);
+      digitalWrite(7,HIGH);
       delay(static_cast<unsigned long>(wholenote/song[i].duration()));
+      digitalWrite(6,LOW);
+      digitalWrite(7,LOW
+      );
     }    
   }
 }
@@ -67,7 +68,8 @@ void playSong(const Note song[], const int notes, const int tempo_bpm) {
 void setup() {
   selectedSong = Song::merry_christmas;
   Serial.begin(9600);
-  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(6, OUTPUT);
   pinMode(2, INPUT_PULLUP); //Reflective optical sensor
   auto cardState = digitalRead(2);
   if(cardState == LOW) {
@@ -75,7 +77,8 @@ void setup() {
   } else {
     cardIsClosed = false;
   }   
-  attachInterrupt(digitalPinToInterrupt(2),cardOpenedClosed,CHANGE);     
+  count = 0;
+  attachInterrupt(digitalPinToInterrupt(2),cardOpenedClosed,RISING);     
 }
 
 // loops continuously during MCU power on

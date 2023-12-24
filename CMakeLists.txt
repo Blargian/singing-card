@@ -7,7 +7,7 @@ include(cmake/arduino_core.cmake)
 include(cmake/arduino_hex.cmake)
 include(cmake/arduino_upload.cmake)
 
-add_executable(sing src/singing-card.cpp inc/singing-card.hpp inc/notes.hpp inc/songs/merry_christmas.hpp inc/songs/jingle_bells.hpp inc/songs/rudolph.hpp)
+add_executable(sing inc/LowPower.h src/LowPower.cpp src/singing-card.cpp inc/singing-card.hpp inc/notes.hpp inc/songs/merry_christmas.hpp inc/songs/jingle_bells.hpp inc/songs/rudolph.hpp)
 target_include_directories(sing PUBLIC inc)
 target_link_libraries(sing PUBLIC ArduinoCore)
 target_compile_options(sing PRIVATE

@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include "LowPower.h"
 #include "singing-card.hpp"
 #include "notes.hpp"
 #include "songs/merry_christmas.hpp"
@@ -17,13 +18,14 @@ void cardOpenedClosed() {
     } else {
       count = 0;
       ++selectedSong;
+      play = true;
     }
     if(!firstTimeOpen)
       cardIsClosed = !cardIsClosed;
   }
   last_interrupt_time = interrupt_time;
   firstTimeOpen = false;
-};
+}
 
 // utility function for computing number of elements in an array
 int computeSize(const Note* song) {
@@ -59,8 +61,7 @@ void playSong(const Note song[], const int notes, const int tempo_bpm) {
       digitalWrite(7,HIGH);
       delay(static_cast<unsigned long>(wholenote/song[i].duration()));
       digitalWrite(6,LOW);
-      digitalWrite(7,LOW
-      );
+      digitalWrite(7,LOW);
     }    
   }
 }
@@ -79,17 +80,17 @@ void setup() {
     cardIsClosed = false;
   }   
   count = 0;
-  attachInterrupt(digitalPinToInterrupt(2),cardOpenedClosed,RISING);     
+  attachInterrupt(digitalPinToInterrupt(2),cardOpenedClosed,HIGH);     
 }
 
 // loops continuously during MCU power on
 void loop() {
     if(cardIsClosed){
       // Santa is sleeping 
-    } else {
+    } else if (!cardIsClosed && play) {
       switch(selectedSong) {
         case Song::merry_christmas:
-          playSong(merry_christmas, sizeof(merry_christmas)/sizeof(merry_christmas[0]), jingle_bells_bpm);
+          playSong(merry_christmas, sizeof(merry_christmas)/sizeof(merry_christmas[0]), merry_christmas_bpm);
           break;
         case Song::jingle_bells:
           playSong(jingle_bells, sizeof(jingle_bells)/sizeof(jingle_bells[0]), jingle_bells_bpm);
@@ -100,6 +101,13 @@ void loop() {
         default:
           break;
       }
+      play = false;
+      interrupt_time_start = millis();
+    }
+
+    last_interrupt_time_end = millis();
+    if((last_interrupt_time_end-interrupt_time_start) >= timeout) {
+      LowPower.powerDown(SLEEP_FOREVER, ADC_OFF, BOD_OFF);
     }
     
 }

@@ -18,7 +18,7 @@ Finally, run:
 
 Configure the project using CMake by running the following command:
 ```
-cmake -S. -Bbuild \
+cmake -G Ninja -S. -Bbuild \
     -D ARDUINO_PORT=COM4 \
     -D CMAKE_TOOLCHAIN_FILE=cmake/toolchain/promini.toolchain.cmake \
     -D CMAKE_BUILD_TYPE=MinSizeRel

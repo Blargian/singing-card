@@ -6,8 +6,14 @@ class Note;
 const int buzzer_pin = 11;
 
 bool firstTimeOpen = false;
+bool play = false;
 volatile bool cardIsClosed = true;
 int count;
+
+// Used for low power 
+unsigned long interrupt_time_start = 0;
+unsigned long last_interrupt_time_end = 0;
+const unsigned long timeout = 60000;
 
 enum class Song {
   merry_christmas,

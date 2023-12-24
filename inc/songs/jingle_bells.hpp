@@ -2,41 +2,46 @@
 #include "notes.hpp"
 
 // Song  : Jingle Bells 
-// Score : https://cantorion.org/music/49/Jingle-Bells-Vocal-line
+// Score : 
 
-const int jingle_bells_bpm = 104;
+const int jingle_bells_bpm = 180;
 
 const Note jingle_bells[] = {
-  Note(d5,eigth), Note(b5,eigth), Note(a5,eigth), Note(g5,eigth),
-  Note(d5,dotted_half), Note(d5,sixteenth), Note(d5,sixteenth),
-  Note(d5,eigth), Note(b5,eigth), Note(a5,eigth), Note(g5,eigth),
-  Note(e5,half),
-  Note(e5,eigth),Note(c6,eigth),Note(b5,eigth),Note(a5,eigth),
-  Note(fS5,half),
-  Note(d6,eigth),Note(d6,eigth),Note(c6,eigth),Note(a5,eigth),
-  Note(b5,half),
-  Note(d5,eigth), Note(b5,eigth), Note(a5,eigth), Note(g5,eigth),
-  Note(d5,half), 
-  Note(d5,eigth), Note(b5,eigth), Note(a5,eigth), Note(g5,eigth),
-  Note(e5,dotted_half), Note(e5,eigth),
-  Note(d5,eigth),Note(d5,eigth),Note(b5,eigth), Note(a5,eigth), Note(g5,eigth),
-  Note(d6,eigth), Note(d6,eigth), Note(d6,eigth), Note(d6,eigth),
-  Note(e6,eigth),Note(d6,eigth), Note(c6,eigth), Note(a5,eigth),
-  Note(g5,quarter), Note(rest,quarter),
-  Note(b5,eigth),Note(b5,eigth),Note(b5,quarter),
-  Note(b5,eigth),Note(b5,eigth),Note(b5,quarter),
-  Note(b5,eigth),Note(d6,eigth),Note(g5,dotted_eigth), Note(a5,sixteenth),
-  Note(b5,half),
-  Note(c6,eigth),Note(c6,eigth),Note(c6,dotted_eigth),Note(c6,sixteenth),
-  Note(c6,eigth),Note(b5,eigth),Note(b5,eigth),Note(b5,sixteenth), Note(b5,sixteenth),
-  Note(b5,eigth),Note(a5,eigth), Note(a5,eigth),Note(b5,eigth),
-  Note(a5,quarter),Note(d6,quarter),
-  Note(b5,eigth),Note(b5,eigth),Note(b5,quarter),
-  Note(b5,eigth),Note(b5,eigth),Note(b5,quarter),
-  Note(b5,eigth),Note(d6,eigth),Note(g5,dotted_eigth), Note(a5,sixteenth),
-  Note(b5,half),
-  Note(c6,eigth),Note(c6,eigth),Note(c6,dotted_eigth),Note(c6,sixteenth),
-  Note(c6,eigth),Note(b5,eigth),Note(b5,eigth),Note(b5,sixteenth), Note(b5,sixteenth),
-  Note(d6,eigth),Note(d6,eigth), Note(c6,eigth),Note(a5,eigth),
-  Note(g5,half,true),
+  Note(b3,quarter),Note(gS4,quarter),Note(fS4,quarter),Note(e4,quarter),
+  Note(b3,half), Note(rest,quarter), Note(b3,eigth),Note(b3,eigth),
+  Note(b3,quarter),Note(gS4,quarter),Note(fS4,quarter),Note(e4,quarter),
+  Note(cS4,whole),
+
+  Note(cS4,quarter),Note(a4,quarter),Note(gS4,quarter),Note(fS4,quarter),
+  Note(dS4,whole), 
+  Note(b4,quarter),Note(b4,quarter),Note(a4,quarter),Note(fS4,quarter),
+  Note(gS4,whole),
+
+  Note(b3,quarter),Note(gS4,quarter), Note(fS4,quarter),Note(e4,quarter),
+  Note(b3,whole),
+  Note(b3,quarter),Note(gS4,quarter), Note(fS4,quarter),Note(e4,quarter),
+  Note(cS4,half), Note(rest,quarter), Note(cS4,quarter),
+  
+  Note(cS4,quarter),Note(a4,quarter),Note(gS4,quarter),Note(fS4,quarter),
+  Note(b4,quarter),Note(b4,quarter),Note(b4,quarter),Note(b4,quarter),
+  Note(cS5,quarter),Note(b4,quarter),Note(a4,quarter),Note(fS4,quarter),
+  Note(e4,half),Note(b4,half),
+
+  Note(gS4,quarter),Note(gS4,quarter),Note(gS4,half),
+  Note(gS4,quarter),Note(gS4,quarter),Note(gS4,half),
+  Note(gS4,quarter),Note(b4,quarter),Note(e4,quarter),Note(rest,eigth),Note(fS4,eigth),
+  Note(gS4,whole),
+  Note(a4,quarter),Note(a4,quarter),Note(a4,quarter),Note(rest,eigth),Note(a4,eigth),
+  Note(a4,quarter),Note(gS4,quarter),Note(gS4,quarter),Note(gS4,eigth),Note(gS4,eigth),
+  Note(gS4,quarter),Note(fS4,quarter),Note(fS4,quarter),Note(gS4,quarter),
+  Note(fS4,half),Note(b4,half),
+
+  Note(gS4,quarter),Note(gS4,quarter),Note(gS4,half),
+  Note(gS4,quarter),Note(gS4,quarter),Note(gS4,half),
+  Note(gS4,quarter),Note(b4,quarter),Note(e4,quarter),Note(rest,eigth),Note(fS4,eigth),
+  Note(gS4,whole),
+  Note(a4,quarter),Note(a4,quarter),Note(a4,quarter),Note(rest,eigth),Note(a4,eigth),
+  Note(a4,quarter),Note(gS4,quarter),Note(gS4,quarter),Note(gS4,eigth),Note(gS4,eigth),
+  Note(b4,quarter),Note(b4,quarter),Note(gS4,quarter),Note(fS4,quarter),
+  Note(e4,whole),
 };

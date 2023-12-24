@@ -19,22 +19,21 @@ const Note rudolph_the_rednose[] = {
 //   Note(g5,whole,true), //all? 
 
   Note(g5,eigth),Note(a5,quarter),Note(g5,eigth),Note(e5,quarter),Note(c6,quarter),
-  Note(a5,quarter),Note(g5,dotted_half),
+  Note(a5,quarter),Note(g5,half), Note(rest,quarter),
   Note(g5,eigth),Note(a5,eigth), Note(g5,eigth),Note(a5,eigth),
   Note(g5,quarter),Note(c6,quarter),Note(b5,whole),
   Note(f5,eigth),Note(g5,quarter),Note(f5,eigth),Note(d5,quarter),Note(b5,quarter),
-  Note(a5,quarter),Note(g5,dotted_half),
+  Note(a5,quarter),Note(g5,half), Note(rest,quarter),
   Note(g5,eigth),Note(a5,eigth),Note(g5,eigth),Note(a5,eigth),
   Note(g5,quarter),Note(a5,quarter),
   Note(e5,whole),  
 
   Note(g5,eigth),Note(a5,quarter),Note(g5,eigth),Note(e5,quarter),Note(c6,quarter),
-  Note(a5,quarter),Note(g5,dotted_half),
+  Note(a5,quarter),Note(g5,half),Note(rest,quarter),
   Note(g5,eigth),Note(a5,eigth), Note(g5,eigth),Note(a5,eigth),
   Note(g5,quarter),Note(c6,quarter),Note(b5,whole),
   Note(f5,eigth),Note(g5,quarter),Note(f5,eigth),Note(d5,quarter),Note(b5,quarter),
-  Note(a5,quarter),Note(g5,dotted_half),
-  Note(g5,eigth),Note(a5,eigth),
+  Note(a5,quarter),Note(g5,half), Note(rest,quarter),
   Note(g5,eigth),Note(a5,eigth),Note(g5,eigth),Note(a5,eigth),Note(g5,quarter),Note(d6,quarter),
   Note(c6,whole),
 

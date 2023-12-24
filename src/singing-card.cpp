@@ -35,7 +35,7 @@ int computeSize(const Note* song) {
 // Santa presses play on his dukebox
 void playSong(const Note song[], const int notes, const int tempo_bpm) {
 
-  const int wholenote = (60000 * 4) / tempo_bpm;
+  const int wholenote = (60000 * 4) / (tempo_bpm*2); // x2 for halved clock speed  
   for (int i = 0; i < notes; i++) {
 
     if(cardIsClosed) {
@@ -43,7 +43,7 @@ void playSong(const Note song[], const int notes, const int tempo_bpm) {
     };
 
     if(song[i].pitch() > 0) {
-      tone(buzzer_pin,static_cast<unsigned long>(song[i].pitch()));
+      tone(buzzer_pin,static_cast<unsigned long>(song[i].pitch()*2)); //x2 for halved clock speed
     } else {
       noTone(buzzer_pin);
     }
@@ -68,6 +68,11 @@ void playSong(const Note song[], const int notes, const int tempo_bpm) {
 
 // runs once after MCU boots up
 void setup() {
+
+  // half the clockspeed for low power usage
+  CLKPR = 0x80; 
+  CLKPR = 0x01;
+
   selectedSong = Song::merry_christmas;
   Serial.begin(9600);
   pinMode(7, OUTPUT);

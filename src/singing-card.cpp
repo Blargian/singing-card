@@ -80,7 +80,7 @@ void setup() {
     cardIsClosed = false;
   }   
   count = 0;
-  attachInterrupt(digitalPinToInterrupt(2),cardOpenedClosed,HIGH);     
+  attachInterrupt(digitalPinToInterrupt(2),cardOpenedClosed,CHANGE);     
 }
 
 // loops continuously during MCU power on
